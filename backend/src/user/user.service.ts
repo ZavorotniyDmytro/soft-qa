@@ -24,6 +24,12 @@ export class UserService {
     }});
   }
 
+  async findByPhone(phone: string) {
+    return await this.userRepository.findOne({where:{
+      phone: phone
+    }});
+  }
+
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
   }

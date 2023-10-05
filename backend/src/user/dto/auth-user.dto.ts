@@ -1,4 +1,4 @@
 export class AuthUserDto {
-    phone: number
+    phone: string
     password: string
 }

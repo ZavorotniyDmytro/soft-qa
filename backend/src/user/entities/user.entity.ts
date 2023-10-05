@@ -6,8 +6,8 @@ export class User {
   id: number;
 
   // login + reg
-  @Column()
-  phone: number
+  @Column({ length: 10, unique: true })
+  phone: string
 
   // login + reg
   @Column({ length: 100 })
