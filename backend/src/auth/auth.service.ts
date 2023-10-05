@@ -18,7 +18,8 @@ export class AuthService {
 
             registerUserDto.password = undefined
 
-            return registerUserDto
+            // return registerUserDto
+            return `User with ${registerUserDto.phone} successfully registered`
         } catch (error) {
             throw new HttpException('Something went wrong: ' + error, HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -32,7 +33,7 @@ export class AuthService {
 				throw new HttpException('Wrong credentials provided', HttpStatus.BAD_REQUEST)
 			}
 			user.password = undefined;
-			return user
+			return `User with ${loginUserDto.phone} successfully authorized` 
 		} catch (error) {
 			throw new HttpException('Wrong credentials provided', HttpStatus.BAD_REQUEST);
 		}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма регистрации и авторизации</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h2>Форма авторизации:</h2>
+<form action="http://localhost:3001/auth/login" method="POST">
+    <label for="phone">Номер телефона (10 символов):</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Введите 10 цифр" required><br><br>
+
+    <label for="password">Пароль (от 9 до 100 символов):</label>
+    <input type="password" id="password" name="password" minlength="9" maxlength="100" title="Пароль должен содержать от 9 до 100 символов" required><br><br>
+
+    <input type="submit" value="Войти">
+</form>
+
+<h2>Форма регистрации:</h2>
+<form action="http://localhost:3001/auth/registration" method="POST">
+    <label for="name">Имя (от 9 до 900 символов):</label>
+    <input type="text" id="name" name="name" minlength="9" maxlength="900" title="Введите от 9 до 900 символов" required><br><br>
+
+    <label for="age">Возраст (от 16 до 95):</label>
+    <input type="number" id="age" name="age" min="16" max="95" title="Введите возраст от 16 до 95" required><br><br>
+
+    <label for="email">E-mail (от 12 до 1000 символов):</label>
+    <input type="email" id="email" name="email" minlength="12" maxlength="1000" title="Введите правильный адрес электронной почты" required><br><br>
+
+    <label for="phone">Номер телефона (10 символов):</label>
+    <input type="phone" id="phone" name="phone" pattern="[0-9]{10}" title="Введите 10 цифр" required><br><br>
+
+    <label for="password">Пароль (от 9 до 100 символов):</label>
+    <input type="password" id="password" name="password" minlength="9" maxlength="100" title="Пароль должен содержать от 9 до 100 символов" required><br><br>
+
+    <input type="submit" value="Зарегистрироваться">
+</form>
+
+</body>
+</html>
